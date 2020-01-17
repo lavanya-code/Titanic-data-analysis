@@ -20,22 +20,20 @@ from sklearn.naive_bayes import GaussianNB
 train = pd.read_csv("titanic_train.csv")
 test = pd.read_csv("titanic_test.csv")
 print(train)
-#train.info()
-#print(train.describe())
-#mac=train.isnull().sum()
-#per=mac/len(train)
-#print(per)
+train.info()
+print(train.describe())
+mac=train.isnull().sum()
+per=mac/len(train)
+print(per)
 Age_median = train['Age'].mean()
 train['Age'].fillna(Age_median,inplace = True)
-#print(train['Age'])
-#print(train.isnull().sum())
+print(train['Age'])
+print(train.isnull().sum())
 common_value = 'S'
 train.fillna(common_value,inplace = True)
 print(train.isnull().sum())
 train.drop("Cabin",axis = 1,inplace = True)
 print(train.isnull().sum())
-
-# analysing the data is done in jupyter notebook
 
 
 #Now conversion into categorical
@@ -60,7 +58,7 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
-#print(X_train)
+print(X_train)
 
 #Gaussian naive bayes prediction
 gaussian = GaussianNB()
@@ -74,10 +72,6 @@ print(acc_gaussian)
 from sklearn.metrics import confusion_matrix
 confusion_matrix = confusion_matrix(y_test,pred)
 print(confusion_matrix)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy=accuracy_score(y_test,pred)
-print(accuracy)"""
 
 #ROC curve
 import sklearn.metrics as metrics
@@ -108,10 +102,7 @@ print(pred1)
 from sklearn.metrics import confusion_matrix
 confusion_matrix1 = confusion_matrix(y_test,pred1)
 print(confusion_matrix1)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy1=accuracy_score(y_test,pred1)
-print(accuracy1)"""
+
 
 #ROC CURVE
 import sklearn.metrics as metrics
@@ -143,10 +134,6 @@ print(acc_random_forest)
 from sklearn.metrics import confusion_matrix
 confusion_matrix2 = confusion_matrix(y_test,pred2)
 print(confusion_matrix2)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy2=accuracy_score(y_test,pred2)
-print(accuracy2)"""
 
 #ROC curve
 import sklearn.metrics as metrics
@@ -179,10 +166,6 @@ print(acc_sgd)
 from sklearn.metrics import confusion_matrix
 confusion_matrix3 = confusion_matrix(y_test,pred3)
 print(confusion_matrix3)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy3=accuracy_score(y_test,pred3)
-print(accuracy3)"""
 
 #ROC curve
 import sklearn.metrics as metrics
@@ -213,10 +196,6 @@ print(acc_knn)
 from sklearn.metrics import confusion_matrix
 confusion_matrix4 = confusion_matrix(y_test,pred4)
 print(confusion_matrix4)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy4=accuracy_score(y_test,pred4)
-print(accuracy4)"""
 
 #ROC curve
 import sklearn.metrics as metrics
@@ -248,10 +227,6 @@ print(acc_decision_tree)
 from sklearn.metrics import confusion_matrix
 confusion_matrix5 = confusion_matrix(y_test,pred5)
 print(confusion_matrix5)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy5=accuracy_score(y_test,pred4)
-print(accuracy5)"""
 
 #ROC curve
 import sklearn.metrics as metrics
@@ -283,10 +258,7 @@ print(acc_linear_svc)
 from sklearn.metrics import confusion_matrix
 confusion_matrix6 = confusion_matrix(y_test,pred6)
 print(confusion_matrix6)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy6=accuracy_score(y_test,pred6)
-print(accuracy6)"""
+
 
 #ROC curve
 import sklearn.metrics as metrics
@@ -318,10 +290,6 @@ print(acc_perceptron)
 from sklearn.metrics import confusion_matrix
 confusion_matrix7 = confusion_matrix(y_test,pred7)
 print(confusion_matrix7)
-# calculate the accuracy
-"""from sklearn.metrics import accuracy_score
-accuracy7=accuracy_score(y_test,pred7)
-print(accuracy7)"""
 
 #ROC curve
 import sklearn.metrics as metrics
