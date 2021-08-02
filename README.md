@@ -14,5 +14,4 @@ In this project Data cleaning and feature engineering is been used. I have used 
 and I observed that random forest classifier and decision tree works better than any other algorithm for this problem.
 
 #### Dataset
-https://www.kaggle.com/c/titanic/data?select=train.csv
-https://www.kaggle.com/c/titanic/data?select=test.csv
+https://www.kaggle.com/c/titanic/data
