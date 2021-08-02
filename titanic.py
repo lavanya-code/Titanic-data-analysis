@@ -48,7 +48,7 @@ print(train)
 train.drop(['Sex','Embarked','PassengerId','Name','Ticket','Pclass'],axis = 1,inplace = True)
 print(train)
 
-# implementation of regression
+
 x = train.drop("Survived",axis = 1)
 y = train["Survived"]
 from sklearn.model_selection import train_test_split
@@ -73,7 +73,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix = confusion_matrix(y_test,pred)
 print(confusion_matrix)
 
-#ROC curve
+#ROC curve for NB
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred)
@@ -91,7 +91,7 @@ plt.legend(loc="lower right")
 plt.show()
 
 
-# Logistic regression
+# Logistic Regression
 from sklearn.linear_model import LogisticRegression
 logmodel = LogisticRegression()
 logmodel.fit(X_train,y_train)
@@ -104,7 +104,7 @@ confusion_matrix1 = confusion_matrix(y_test,pred1)
 print(confusion_matrix1)
 
 
-#ROC CURVE
+#ROC CURVE for LG
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred1)
@@ -135,7 +135,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix2 = confusion_matrix(y_test,pred2)
 print(confusion_matrix2)
 
-#ROC curve
+#ROC curve for RFC
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred2)
@@ -167,7 +167,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix3 = confusion_matrix(y_test,pred3)
 print(confusion_matrix3)
 
-#ROC curve
+#ROC curve for SGD
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred3)
@@ -197,7 +197,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix4 = confusion_matrix(y_test,pred4)
 print(confusion_matrix4)
 
-#ROC curve
+#ROC curve for KNN
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred4)
@@ -228,7 +228,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix5 = confusion_matrix(y_test,pred5)
 print(confusion_matrix5)
 
-#ROC curve
+#ROC curve for DT
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred5)
@@ -260,7 +260,7 @@ confusion_matrix6 = confusion_matrix(y_test,pred6)
 print(confusion_matrix6)
 
 
-#ROC curve
+#ROC curve for LSV
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred6)
@@ -291,7 +291,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix7 = confusion_matrix(y_test,pred7)
 print(confusion_matrix7)
 
-#ROC curve
+#ROC curve for Perceptron
 import sklearn.metrics as metrics
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, thresholds = roc_curve(y_test, pred7)
